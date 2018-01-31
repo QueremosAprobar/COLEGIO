@@ -58,10 +58,10 @@ class CursoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($idcurso)
+    public function show($id)
     {
         //
-        $curso=Curso::findOrFail($idcurso);
+        $curso=Curso::findOrFail($id);
         return view('cursos.show',['curso'=>$curso]);
     }
 
@@ -71,10 +71,10 @@ class CursoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($idcurso)
+    public function edit($id)
     {
         //
-        $curso=Curso::findOrFail($idcurso);
+        $curso=Curso::findOrFail($id);
         return view('cursos.edit',['curso'=>$curso]);
     }
 
@@ -85,9 +85,9 @@ class CursoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $idcurso)
+    public function update(Request $request, $id)
     {
-        $curso= Curso::findOrFail($idcurso);
+        $curso= Curso::findOrFail($id);
         $curso ->nombre= $request->get('nombre');
         $curso ->nivel= $request->get('nivel');
         $curso ->grado= $request->get('grado');
@@ -101,11 +101,11 @@ class CursoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($idcurso)
+    public function destroy($id)
     {
-        $curso=Curso::findOrFail($idcurso);
+        $curso=Curso::findOrFail($id);
         $curso->delete();
-        return redirect('/cursos')->with('mensaje','El Curso con id:'.$idcurso.',se elimino correctamente!!');
+        return redirect('/cursos')->with('mensaje','El Curso con id:'.$id.',se elimino correctamente!!');
         //DB::table('alumnos')->where('id',$id)->delete();
         //return redirect('/alumnos');
     }

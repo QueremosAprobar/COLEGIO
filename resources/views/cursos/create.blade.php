@@ -42,7 +42,7 @@
                                     </select>
                                 </div>
                                 <div class="form-group">
-                                    <label>Grado</label>
+                                    <label>Grado</label><br>
                                     <input type="radio" id="1" name="grado" value="1">
                                     <label for="1">1er</label>
                                     <input type="radio" id="2" name="grado" value="2">
@@ -83,12 +83,12 @@
             }
             if (n=="SECUNDARIA")
             {
-                document.getElementById("1").disabled=true;
-                document.getElementById("2").disabled=true;
-                document.getElementById("3").disabled=true;
-                document.getElementById("4").disabled=true;
-                document.getElementById("5").disabled=true;
-                document.getElementById("6").disabled=false;
+                document.getElementById("1").disabled=false;
+                document.getElementById("2").disabled=false;
+                document.getElementById("3").disabled=false;
+                document.getElementById("4").disabled=false;
+                document.getElementById("5").disabled=false;
+                document.getElementById("6").disabled=true;
             }
             if (n=="INICIAL")
             {
