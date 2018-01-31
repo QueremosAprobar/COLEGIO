@@ -64,24 +64,24 @@
                                 @foreach($cursos as $curso)
 
                                     <tr class="odd gradeA" rol="row">
-                                        <td>{{ $curso->id }}</td>
+                                        <td>{{ $curso->idcurso }}</td>
                                         <td>{{ $curso->nombre }}</td>
                                         <td>{{ $curso->nivel }}</td>
                                         <td>{{ $curso->grado }}</td>
                                         <td class="center">
                                             <ul class="nav nav-pills">
                                                 <li>
-                                                    <a href="{!! action('CursoController@show', $curso->id) !!}" title="Ver">
+                                                    <a href="{!! action('CursoController@show', $curso->idcurso) !!}" title="Ver">
                                                         <spam class="glyphicon glyphicon-search"></spam>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a href="{!! action('CursoController@edit', $curso->id) !!}" title="Editar">
+                                                    <a href="{!! action('CursoController@edit', $curso->idcurso) !!}" title="Editar">
                                                         <spam class="glyphicon glyphicon-pencil"></spam>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <form method="post" action="{!! action('CursoController@destroy', $curso->id) !!}" onclick="return confirm('Se eliminara este registro, Esta seguro?');">
+                                                    <form method="post" action="{!! action('CursoController@destroy', $curso->idcurso) !!}" onclick="return confirm('Se eliminara este registro, Esta seguro?');">
                                                         {!! csrf_field() !!}
                                                         {!! method_field('DELETE') !!}
                                                         <div>

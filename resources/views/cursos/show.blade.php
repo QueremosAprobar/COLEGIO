@@ -18,6 +18,10 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <form role="form" >
+                                <div class="form-group ">
+                                    <label>ID Curso</label>
+                                    <input type="text" class="form-control" value="{!! $curso->idcurso !!}"  disabled="" >
+                                </div>
                                  <div class="form-group ">
                                     <label>Nombre</label>
                                     <input type="text" class="form-control" value="{!! $curso->nombre !!}">

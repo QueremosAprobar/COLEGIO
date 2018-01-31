@@ -26,8 +26,14 @@
                                         @endforeach
                                     </ul> 
                                 </div>
-                                @endif  
+                                @endif
+                                   <?php /**/ $a=count($cursos)+1 /**/ ?>
+
                                 <input type="hidden" name="_token" value="{!! csrf_token() !!}">
+                                   <div class="form-group">
+                                       <label>ID Curso</label>
+                                       <input type="text" class="form-control" name="idcurso" placeholder="1" value={{ $a }} >
+                                   </div>
                                 
                                 <div class="form-group">
                                     <label>Nombre</label>
@@ -37,8 +43,8 @@
                                     <label>Nivel</label>
                                     <select id="nivel" name="nivel" class="form-control" onchange="myfunction()">
                                         <option  value="INICIAL">INICIAL</option>
-                                        <option value="PRIMARIA">PRIMARIA</option>
-                                        <option value="SECUNDARIA" selected>SECUNDARIA</option>
+                                        <option value="PRIMARIA" selected>PRIMARIA</option>
+                                        <option value="SECUNDARIA">SECUNDARIA</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
@@ -69,7 +75,6 @@
         </div>
     </div>
     <script>
-
         function myfunction() {
             var n= document.getElementById("nivel").value;
             if (n=="PRIMARIA")

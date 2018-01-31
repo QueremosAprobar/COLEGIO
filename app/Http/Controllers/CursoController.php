@@ -30,8 +30,8 @@ class CursoController extends Controller
      */
     public function create()
     {
-        //
-        return view('cursos.create');
+        $cursos = Curso::all();
+        return view('cursos.create',['cursos'=>$cursos]);
     }
 
     /**
@@ -44,6 +44,7 @@ class CursoController extends Controller
     {
         //
         $curso= new Curso;
+        $curso->idcurso=$request->get('idcurso');
         $curso->nombre=$request->get('nombre');
         $curso->nivel=$request->get('nivel');
         $curso->grado=$request->get('grado');
@@ -58,10 +59,10 @@ class CursoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($idcurso)
     {
         //
-        $curso=Curso::findOrFail($id);
+        $curso=Curso::findOrFail($idcurso);
         return view('cursos.show',['curso'=>$curso]);
     }
 
@@ -71,10 +72,10 @@ class CursoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($idcurso)
     {
         //
-        $curso=Curso::findOrFail($id);
+        $curso=Curso::findOrFail($idcurso);
         return view('cursos.edit',['curso'=>$curso]);
     }
 
@@ -85,9 +86,10 @@ class CursoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $idcurso)
     {
-        $curso= Curso::findOrFail($id);
+        $curso= Curso::findOrFail($idcurso);
+        $curso ->nombre= $request->get('idcurso');
         $curso ->nombre= $request->get('nombre');
         $curso ->nivel= $request->get('nivel');
         $curso ->grado= $request->get('grado');
@@ -101,11 +103,11 @@ class CursoController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy($idcurso)
     {
-        $curso=Curso::findOrFail($id);
+        $curso=Curso::findOrFail($idcurso);
         $curso->delete();
-        return redirect('/cursos')->with('mensaje','El Curso con id:'.$id.',se elimino correctamente!!');
+        return redirect('/cursos')->with('mensaje','El Curso con id:'.$idcurso.',se elimino correctamente!!');
         //DB::table('alumnos')->where('id',$id)->delete();
         //return redirect('/alumnos');
     }

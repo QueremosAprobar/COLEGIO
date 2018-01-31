@@ -19,7 +19,7 @@
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-lg-6">
-                            <form role="form" method="post" action="/cursos/{{ $curso-> id}}" autocomplete="off">
+                            <form role="form" method="post" action="/cursos/{{ $curso-> idcurso}}" autocomplete="off">
                                 @foreach($errors->all() as $error)
                                     <div class="alert alert-danger">
                                         <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
@@ -31,6 +31,10 @@
                                     {!! csrf_field() !!}
                                     {!! method_field('PUT') !!}
 
+                                    <div class="form-group">
+                                        <label>ID Curso</label>
+                                        <input type="text" class="form-control" value="{!! $curso->idcurso !!}" name="idcurso" disabled="">
+                                    </div>
                                 <div class="form-group">
                                     <label>Nombre</label>
                                     <input type="text" class="form-control" value="{!! $curso->nombre !!}" name="nombre" >
@@ -41,10 +45,10 @@
                                     <select id="nivel" name="nivel" class="form-control" onchange="myfunction()">
                                         <option  value="INICIAL"  @if($curso->nivel == "INICIAL") selected="" @endif>INICIAL</option>
                                         <option value="PRIMARIA" @if($curso->nivel == "PRIMARIA") selected="" @endif>PRIMARIA</option>
-                                        <option value="SECUNDARIA" @if($curso->nivel == "SECUNDARIA") selected="" @endif>SECUNDARIA</option>
+                                        <option value="SECUNDARIA" @if($curso->nivel == "SECUNDARIA") selected=""  @endif>SECUNDARIA</option>
                                     </select>
-                                </div>
 
+                                </div>
                                 <div class="form-group">
                                     <label>Grado</label><br>
                                     <input type="radio" id="1" name="grado" value="1" @if($curso->grado == "1") checked="" @endif>
