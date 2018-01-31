@@ -35,11 +35,26 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Nivel</label>
-                                    <input type="text" class="form-control" name="nivel" placeholder="Nivel">
+                                    <select id="nivel" name="nivel" class="form-control" onchange="myfunction()">
+                                        <option  value="INICIAL">INICIAL</option>
+                                        <option value="PRIMARIA">PRIMARIA</option>
+                                        <option value="SECUNDARIA" selected>SECUNDARIA</option>
+                                    </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Grado</label>
-                                    <input type="text" class="form-control" name="grado">
+                                    <input type="radio" id="1" name="grado" value="1">
+                                    <label for="1">1er</label>
+                                    <input type="radio" id="2" name="grado" value="2">
+                                    <label for="2">2do</label>
+                                    <input type="radio" id="3" name="grado" value="3">
+                                    <label for="3">3er</label>
+                                    <input type="radio" id="4" name="grado" value="4">
+                                    <label for="4">4to</label>
+                                    <input type="radio" id="5" name="grado" value="5">
+                                    <label for="5">5to</label>
+                                    <input type="radio" id="6" name="grado" value="6">
+                                    <label for="6">6to</label>
                                 </div>
 
                                 <button type="submit" class="btn btn-success">Guardar</button>
@@ -53,3 +68,36 @@
             </div>
         </div>
     </div>
+    <script>
+
+        function myfunction() {
+            var n= document.getElementById("nivel").value;
+            if (n=="PRIMARIA")
+            {
+                document.getElementById("1").disabled=false;
+                document.getElementById("2").disabled=false;
+                document.getElementById("3").disabled=false;
+                document.getElementById("4").disabled=false;
+                document.getElementById("5").disabled=false;
+                document.getElementById("6").disabled=false;
+            }
+            if (n=="SECUNDARIA")
+            {
+                document.getElementById("1").disabled=true;
+                document.getElementById("2").disabled=true;
+                document.getElementById("3").disabled=true;
+                document.getElementById("4").disabled=true;
+                document.getElementById("5").disabled=true;
+                document.getElementById("6").disabled=false;
+            }
+            if (n=="INICIAL")
+            {
+                document.getElementById("1").disabled=false;
+                document.getElementById("2").disabled=false;
+                document.getElementById("3").disabled=false;
+                document.getElementById("4").disabled=true;
+                document.getElementById("5").disabled=true;
+                document.getElementById("6").disabled=true;
+            }
+        }
+    </script>
