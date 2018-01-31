@@ -28,7 +28,7 @@
                                 </div>
                                 <div class="form-group ">
                                     <label>Grado</label>
-                                    <input type="text" class="form-control" value="{!! $curso->gradp !!}">
+                                    <input type="text" class="form-control" value="{!! $curso->grado !!}">
                                 </div>
                                 <button type="button" class="btn btn-danger" onClick="location.href='/cursos'">Volver</button>
                             </form>
