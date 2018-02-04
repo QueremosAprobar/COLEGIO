@@ -30,26 +30,13 @@
                                 @endforeach
                                     {!! csrf_field() !!}
                                     {!! method_field('PUT') !!}
-                                <!--
-                                <div class="form-group ">
-                                    <label>DNI</label>
-                                    <input type="text" class="form-control" value="{!! $alumno-> dnialumno!!}" name="dnialumno" disabled="" >
-                                </div>
--->
-
                                 <div class="form-group">
                                     <label>DNI</label>
-                                    <input type="text" class="form-control" value="{!! $alumno->dnialumno !!}" name="dnialumno" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+                                    <input type="text" class="form-control" value="{!! $alumno->dnialumno !!}" name="dnialumno">
                                 </div>
-
-                                <div class="form-group">
-                                    <label>DNI</label>
-                                    <input type="text" class="form-control" value="{!! $alumno->dnialumno !!}" name="dni">
-                                </div>
-
                                 <div class="form-group">
                                     <label>Contraseña</label>
-                                    <input type="text" class="form-control" value="{!! $alumno-> contraseña!!}" name="contraseña" style="text-transform: uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+                                    <input type="password" class="form-control" value="{!! $alumno-> contraseña!!}" name="contraseña">
                                 </div>
                                 <div class="form-group">
                                     <label>Nombre</label>
@@ -79,24 +66,20 @@
 
                                 <div class="form-group">
                                     <label>Email</label>
-                                    <input type="email" class="form-control" value="{!! $alumno-> email!!}" name="email" style="text-transform: lowercase;" onkeyup="javascript:this.value=this.value.toLowerCase();">
+                                    <input type="email" class="form-control" value="{!! $alumno-> email!!}" name="email">
                                 </div>
                                 <div class="form-group">
                                     <label>Direccion</label>
                                     <input type="text" class="form-control" value="{!! $alumno-> direccion!!}" name="direccion" style="text-transform: uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
                                 </div>
                                 <div class="form-group">
-                                    <label>Distrito</label>
-                                    <input type="text" class="form-control" value="{!! $alumno-> distrito!!}" name="distrito" style="text-transform: uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
-                                </div>
-                                <div class="form-group">
-                                    <label>Provincia</label>
-                                    <input type="text" class="form-control" value="{!! $alumno-> provincia!!}" name="provincia" style="text-transform: uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
-                                </div>
-                                <div class="form-group">
-                                    <label>Departamento</label>
-                                    <input type="text" class="form-control" value="{!! $alumno-> departamento!!}" name="departamento" style="text-transform: uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
-                                </div>                              
+                                    <label>Estado</label>
+                                    <select name="estadoal" class="form-control">
+                                        <option value="" selected="">Elije una Opcion</option>
+                                        <option value="Habilitado">HABILITADO</option>
+                                        <option value="Desabilitado">INHABILITADO</option>
+                                    </select>
+                                </div>                                                               
                                 <button type="submit" class="btn btn-success">Guardar</button>
                                 <button type="reset" class="btn btn-warning">Limpiar</button>
                                 <button type="button" class="btn btn-danger" onClick="location.href='/alumnos'">Volver</button>

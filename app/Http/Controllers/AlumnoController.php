@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 
 use App\Http\Requests\AlunnoFormRequest;
 use App\Alumno;
+use App\Apoderado;
 
 
 class AlumnoController extends Controller
@@ -31,7 +32,8 @@ class AlumnoController extends Controller
      */
     public function create()
     {
-        return view('alumnos.create');
+        $apoderados = Apoderado::all();
+        return view('alumnos.create',compact('apoderados'));
     }
 
     /**
@@ -53,9 +55,8 @@ class AlumnoController extends Controller
         $alumno->sexo=$request->get('sexo');
         $alumno->email=$request->get('email');
         $alumno->direccion=$request->get('direccion');
-        $alumno->distrito=$request->get('distrito');
-        $alumno->provincia=$request->get('provincia');
-        $alumno->departamento=$request->get('departamento');
+        $alumno->dniapoderado=$request->get('dniapoderado');
+        $alumno->estadoal=$request->get('estadoal');        
         $alumno->save();
         return redirect('/alumnos')->with('mensaje','Se inserto correctamente!!');
     }
@@ -101,10 +102,8 @@ class AlumnoController extends Controller
         $alumno->telefono=$request->get('telefono');
         $alumno->sexo=$request->get('sexo');
         $alumno->email=$request->get('email');
-        $alumno->direccion=$request->get('direccion');
-        $alumno->distrito=$request->get('distrito');
-        $alumno->provincia=$request->get('provincia');
-        $alumno->departamento=$request->get('departamento');
+        $alumno->direccion=$request->get('direccion');        
+        $alumno->estadoal=$request->get('estadoal');
         $alumno->save();
         return redirect('/alumnos')->with('mensaje','Se modifico correctamente!!');
     }

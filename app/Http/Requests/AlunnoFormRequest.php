@@ -26,12 +26,12 @@ class AlunnoFormRequest extends FormRequest
         return [
             //
             
-            'dnialumno'=>'required|size:8|regex:/^[0-9]+$/|unique',
+            'dnialumno'=>['required','size:8','regex:/^[0-9]+$/','unique:alumnoS'],
             'contraseña'=>['required','max:30','min:6'],
 //          'iddocente'=>['required','size:4','regex:/^[0-9A-Z]+$/'],
-            'nombre'=>['required','max:100','min:3','regex:/^[A-Z ]+$/'],
-            'apellido'=>['required','max:100','min:3','regex:/^[A-Z ]+$/'],
-            'direccion'=>['required','max:100'],
+            'nombre'=>['required','max:100','min:3','regex:/^[A-Z Ñ]+$/'],
+            'apellido'=>['required','max:100','min:3','regex:/^[A-Z Ñ]+$/'],
+            'direccion'=>['required','max:100','min:3'],
             'telefono'=>['required','size:9','regex:/^[0-9]+$/'],
             'email'=>['required','max:50','email']
             

@@ -123,12 +123,18 @@
                                 </li>
                                 <li>
                                     <a href="/cursos">Cursos</a>
-
                                 <li>
                                     <a href="/notas">Notas</a>
                                 </li>
-
-
+                                <li>
+                                    <a href="/anios">Años</a>
+                                </li>
+                                <li>
+                                    <a href="/matriculas">Matriculas</a>
+                                </li>
+                                <li>
+                                    <a href="/listamatriculas">Lista De Matriculas</a>
+                                </li>
                                 <li> <a href="/viewalumnos">ViewAlumnos</a></li>
 
 

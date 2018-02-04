@@ -59,8 +59,10 @@
                                     <label>Estado</label>
                                     <select type="text" class="form-control" value="{!! $apoderado->estadocv !!}" name="estadocv">
                                         <option value="" selected="">Elije una Opcion</option>
-                                        <option value="Habilitado" @if($apoderado->estadocv == "Habilitado") selected="" @endif >Habilitado</option>
-                                        <option value="Desabilitado" @if($apoderado->estadocv == "Desabilitado") selected="" @endif >Desabilitado</option>                                                                   
+                                        <option value="SOLTERO" @if($apoderado->estadocv == "SOLTERO") selected="" @endif >SOLTERO</option>
+                                        <option value="CASADO" @if($apoderado->estadocv == "CASADO") selected="" @endif >CASADO</option>
+                                        <option value="DIVORCIADO" @if($apoderado->estadocv == "DIVORCIADO") selected="" @endif >DIVORCIADO</option>
+                                        <option value="VIUDO" @if($apoderado->estadocv == "VIUDO") selected="" @endif >VIUDO</option>                                      
                                     </select>
                                 </div>
                                 <div class="form-group">

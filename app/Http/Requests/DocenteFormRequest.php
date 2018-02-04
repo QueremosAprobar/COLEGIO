@@ -28,11 +28,11 @@ class DocenteFormRequest extends FormRequest
             'dnidocente'=>['required','unique:docentes','size:8','regex:/^[0-9]+$/'],
             'contraseña'=>['required','max:30','min:6'],
 //            'iddocente'=>['required','size:4','regex:/^[0-9A-Z]+$/'],
-            'nombre'=>['required','max:100','min:3','regex:/^[A-Z ]+$/'],
-            'apellido'=>['required','max:100','min:3','regex:/^[A-Z ]+$/'],
+            'nombre'=>['required','max:100','min:3','regex:/^[A-Z Ñ]+$/'],
+            'apellido'=>['required','max:100','min:3','regex:/^[A-Z Ñ]+$/'],
             'direccion'=>['required','max:100'],
-            'telefono'=>['required','size:9','regex:/^[0-9]+$/'],
-            'email'=>['required','max:50','email']
+            'telefono'=>['size:9','regex:/^[0-9]+$/'],
+            'email'=>['max:50','email']
         ];
     }
 }

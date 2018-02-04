@@ -18,24 +18,23 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <form role="form" method="post" action="/alumnos" autocomplete="off">
-                               @if (count($errors)>0)
-                                <div class="alert alert-danger">
-                                    <ul>
-                                        @foreach($errors->all() as $error)
-                                        <li>{{ $error}}</li>
-                                        @endforeach
-                                    </ul> 
-                                </div>
-                                @endif  
+                                @foreach($errors->all() as $error)
+                                    <div class="alert alert-danger">
+                                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">
+                                            x
+                                        </button>
+                                        {{ $error }}
+                                    </div>
+                                @endforeach
                                 <input type="hidden" name="_token" value="{!! csrf_token() !!}">
-                                
+
                                 <div class="form-group">
                                     <label>DNI</label>
                                     <input type="text" class="form-control" placeholder="12345678" name="dnialumno">
                                 </div>
                                 <div class="form-group">
                                     <label>Contraseña</label>
-                                    <input type="password" class="form-control" name="contraseña" placeholder="***********" value="{{old('contraseña')}}">
+                                    <input type="text" class="form-control" name="contraseña" style="text-transform: uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
                                 </div>
                                 <div class="form-group">
                                     <label>Nombre</label>
@@ -52,48 +51,34 @@
 
                                 <div class="form-group">
                                     <label>Telefono</label>
-                                    <input type="text" class="form-control" placeholder="974000000" name="telefono">
-                                </div>
+                                    <input type="text" class="form-control" placeholder="" name="telefono">
+                                </div>                             
                                 <div class="form-group">
                                     <label>Sexo</label>
                                     <select name="sexo" class="form-control">
                                         <option value="" selected="">Elije una Opcion</option>
-                                        <option value="M">MASCULINO</option>
-                                        <option value="F">FEMENINO</option>
+                                        <option value="M">Masculino</option>
+                                        <option value="F">Femenino</option>
                                     </select>
                                 </div>
+
                                 <div class="form-group">
                                     <label>Email</label>
-                                    <input type="email" class="form-control" placeholder="nombre@example.com" name="email">
+                                    <input type="email" class="form-control" placeholder="nombre@example.com" name="email" style="text-transform: lowercase;" onkeyup="javascript:this.value=this.value.toLowerCase();">
                                 </div>
                                 <div class="form-group">
                                     <label>Direccion</label>
                                     <input type="text" class="form-control" name="direccion" style="text-transform: uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
-                                </div> 
-                                <div class="form-group">
-                                    <label>Apoderado</label>
-                                    <select id="dniapoderado" name="dniapoderado" class="form-control">
-                                             @foreach($apoderados as $apoderado)
-                                                <option value="{{ $apoderado->dniapoderado }}">{{ $apoderado->nombre }} {{ $apoderado->apellido}}</option>
-                                            @endforeach 
-                                            </select>                             
                                 </div>
                                 <div class="form-group">
-                                    <label>Estado</label>
-                                    <select name="estadoal" class="form-control">
-                                        <option value="" selected="">Elije una Opcion</option>
-                                        <option value="Habilitado">HABILITADO</option>
-                                        <option value="Desabilitado">INHABILITADO</option>
-                                    </select>
-                                </div>                    
-                                <button type="submit" class="btn btn-success">Guardar</button>
-                                <button type="reset" class="btn btn-warning">Limpiar</button>
-                                <button type="button" class="btn btn-danger" onclick="location.href='/alumnos'">Volver</button>
-                            </form>
-                        </div>
-                        @stop
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                                    <label>Distrito</label>
+                                    <input type="text" class="form-control" name="distrito" style="text-transform: uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+                                </div>
+                                <div class="form-group">
+                                    <label>Provincia</label>
+                                    <input type="text" class="form-control" name="provincia" style="text-transform: uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+                                </div>
+                                <div class="form-group">
+                                    <label>Departamento</label>
+                                    <input type="text" class="form-control" name="departamento" style="text-transform: uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+                                </div>  

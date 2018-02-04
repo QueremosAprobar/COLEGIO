@@ -58,18 +58,15 @@
                                     <label>Direccion</label>
                                     <input type="text" class="form-control" value="{!! $alumno->direccion !!}" style="text-transform: lowercase;" onkeyup="javascript:this.value.toLowerCase();" disabled="" >
                                 </div>
-                                 <div class="form-group ">
-                                    <label>Distrito</label>
-                                    <input type="text" class="form-control" value="{!! $alumno->distrito !!}" style="text-transform: lowercase;" onkeyup="javascript:this.value.toLowerCase();" disabled="" >
-                                </div>
-                                 <div class="form-group ">
-                                    <label>Provincial</label>
-                                    <input type="text" class="form-control" value="{!! $alumno->provincia !!}" style="text-transform: lowercase;" onkeyup="javascript:this.value.toLowerCase();" disabled="" >
-                                </div>
-                                 <div class="form-group ">
-                                    <label>Departamento</label>
-                                    <input type="text" class="form-control" value="{!! $alumno->departamento !!}" style="text-transform: lowercase;" onkeyup="javascript:this.value.toLowerCase();" disabled="" >
-                                </div>
+                                <div class="form-group">
+                                    <label>Estado</label>
+                                    <select name="estadoal" class="form-control">
+                                        <option value="" selected="">Elije una Opcion</option>
+                                        <option value="Habilitado" @if($alumno->estadoal == "HABILITADO") selected="" @endif>HABILITADO</option>
+                                        <option value="Desabilitado" @if($alumno->estadoal == "INHABILITADO") selected="" @endif>INHABILITADO</option>
+                                    </select>
+                                </div> 
+                                 
                                 <button type="button" class="btn btn-danger" onClick="location.href='/alumnos'">Volver</button>
                             </form>
                         </div>

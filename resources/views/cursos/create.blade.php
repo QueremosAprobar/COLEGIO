@@ -32,7 +32,7 @@
                                 <input type="hidden" name="_token" value="{!! csrf_token() !!}">
                                    <div class="form-group">
                                        <label>ID Curso</label>
-                                       <input type="text" class="form-control" name="idcurso" placeholder="1" value={{ $a }} >
+                                       <input type="text" class="form-control" name="idcurso" placeholder="" value={{ $a }} >
                                    </div>
                                 
                                 <div class="form-group">
@@ -47,7 +47,7 @@
                                         <option value="SECUNDARIA">SECUNDARIA</option>
                                     </select>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group">                                    
                                     <label>Grado</label><br>
                                     <input type="radio" id="1" name="grado" value="1">
                                     <label for="1">1er</label>

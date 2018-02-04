@@ -56,7 +56,7 @@
                                     <th>Sexo</th>
                                     <th>Direccion</th>                                    
                                     <th>Telefono</th>
-                                    <th>Estado</th>                                    
+                                    <th>Estado Civil</th>                                    
                                     <th>Operaciones</th>
                                 </tr>
                                 </thead>

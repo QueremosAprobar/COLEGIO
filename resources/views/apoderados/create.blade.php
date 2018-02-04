@@ -34,18 +34,18 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Nombre</label>
-                                    <input type="text" class="form-control" placeholder="Yeraldo" name="nombre" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+                                    <input type="text" class="form-control" placeholder="" name="nombre" style="text-transform:uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
                                 </div>
                                 <div class="form-group">
                                     <label>Apellidos</label>
-                                    <input type="text" class="form-control" placeholder="Mollinedo Pe" name="apellido" style="text-transform: uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
+                                    <input type="text" class="form-control" placeholder="" name="apellido" style="text-transform: uppercase;" onkeyup="javascript:this.value=this.value.toUpperCase();">
                                 </div>
                                 <div class="form-group">
                                     <label>Sexo</label>
                                     <select name="sexo" class="form-control">
                                         <option value="" selected="">Elije una Opcion</option>
-                                        <option value="M">Masculino</option>
-                                        <option value="F">Femenino</option>
+                                        <option value="M">MASCULINO</option>
+                                        <option value="F">FEMENINO</option>
                                     </select>
                                 </div>                                                            
                                 <div class="form-group">
@@ -56,13 +56,15 @@
                                     <label>Estado</label>
                                     <select name="estadocv" class="form-control">
                                         <option value="" selected="">Elije una Opcion</option>
-                                        <option value="Habilitado">Habilitado</option>
-                                        <option value="Desabilitado">Desabilitado</option>
+                                        <option value="SOLTERO">SOLTERO</option>
+                                        <option value="CASADO">CASADO</option>
+                                        <option value="DIVORSIADO">DIVORCIADO</option>
+                                        <option value="VIUDO">VIUDO</option>
                                     </select>
                                 </div>
                                 <div class="form-group">
                                     <label>Telefono</label>
-                                    <input type="text" class="form-control" placeholder="900000000" name="telefono" style="text-transform: lowercase;" onkeyup="javascript:this.value=this.value.toLowerCase();">
+                                    <input type="text" class="form-control" placeholder="984000000" name="telefono" style="text-transform: lowercase;" onkeyup="javascript:this.value=this.value.toLowerCase();">
                                 </div>
                                 
                                 <!--<div class="form-group">

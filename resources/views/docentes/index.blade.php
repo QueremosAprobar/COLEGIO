@@ -52,18 +52,14 @@
                             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                 <tr>
-                                    <th>DNI</th>
-                                    {{--<th>Contraseña</th>--}}
+                                    <th>DNI</th>                                    
                                     <th>Nombres</th>
-                                    <th>Apellidos</th>
-                                    <th>Direccion</th>
+                                    <th>Apellidos</th>                                    
                                     <th>Telefono</th>
                                     <th>Nivel</th>
-                                    <th>Especialidad</th>
-                                    <th>Email</th>
+                                    <th>Especialidad</th>                                    
                                     <th>Sexo</th>
                                     <th>Estado</th>
-
                                     <th>Operaciones</th>
                                 </tr>
                                 </thead>
@@ -72,11 +68,9 @@
                                 @foreach($docentes as $docente)
 
                                     <tr class="odd gradeA" rol="row">
-                                        <td>{{ $docente->dnidocente }}</td>
-                                        {{--<td>{{ $docente->contraseña }}</td>--}}
+                                        <td>{{ $docente->dnidocente }}</td>                     
                                         <td>{{ $docente->nombre }}</td>
-                                        <td>{{ $docente->apellido }}</td>
-                                        <td>{{ $docente->direccion }}</td>
+                                        <td>{{ $docente->apellido }}</td>                                 
                                         <td>{{ $docente->telefono }}</td>
                                         <td>{{ $docente->nivel }}</td>
                                         @if($docente->nivel == "SECUNDARIA")
@@ -85,7 +79,6 @@
                                             <td>{{ $docente->especialidad =""}}</td>
                                         @endif
                                         {{--combobox de especialidad--}}
-                                        <td>{{ $docente->email }}</td>
                                         <td>{{ $docente->sexo }}</td>
                                         {{--combobox de sexo--}}
                                         <td>{{ $docente->estado }}</td>
