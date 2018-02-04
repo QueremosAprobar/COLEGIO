@@ -52,12 +52,12 @@
                             <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                 <thead>
                                 <tr>
-                                    <th>DNI</th>                                    
+                                    <th>DNI</th>
                                     <th>Nombres</th>
-                                    <th>Apellidos</th>                                    
+                                    <th>Apellidos</th>
                                     <th>Telefono</th>
                                     <th>Nivel</th>
-                                    <th>Especialidad</th>                                    
+                                    <th>Especialidad</th>
                                     <th>Sexo</th>
                                     <th>Estado</th>
                                     <th>Operaciones</th>
@@ -68,9 +68,9 @@
                                 @foreach($docentes as $docente)
 
                                     <tr class="odd gradeA" rol="row">
-                                        <td>{{ $docente->dnidocente }}</td>                     
+                                        <td>{{ $docente->dnidocente }}</td>
                                         <td>{{ $docente->nombre }}</td>
-                                        <td>{{ $docente->apellido }}</td>                                 
+                                        <td>{{ $docente->apellido }}</td>
                                         <td>{{ $docente->telefono }}</td>
                                         <td>{{ $docente->nivel }}</td>
                                         @if($docente->nivel == "SECUNDARIA")
@@ -85,10 +85,9 @@
                                         <td class="center">
                                             <ul class="nav nav-pills">
 
-                                                  <a href="{!! action('AsignacionController@edit', $docente->dnidocente) !!}" title="Asignar carga">
-                                                      <spam class="glyphicon glyphicon-calendar"></spam>
-                                                  </a>
-
+                                                    <a href="{!! action('AsignacionController@show', $docente->dnidocente) !!}" title="Asignar carga">
+                                                        <spam class="glyphicon glyphicon-calendar"></spam>
+                                                    </a>
 
                                                     <a href="{!! action('DocenteController@show', $docente->dnidocente) !!}" title="Ver">
                                                         <spam class="glyphicon glyphicon-search"></spam>

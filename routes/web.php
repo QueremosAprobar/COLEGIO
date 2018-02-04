@@ -19,6 +19,9 @@ Route::resource('viewalumnos','ViewAlumnoController');
 Route::resource('docentes','DocenteController');
 Route::resource('aulas','AulaController');
 Route::resource('asignaciones','AsignacionController');
+Route::resource('asignacionesp','AsignacionPController');
+
+
 Route::resource('cursos','CursoController');
 Route::resource('anios','AnioController');
 
